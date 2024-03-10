@@ -29,8 +29,9 @@ export class AddTeammatesPageComponent implements OnInit {
       id:0,
       Name:"",
       Role:{id:0,name:""},
-      WorkingHours:-1,
-      TotalJirasAssigned : 0
+      WorkingHours:0,
+      TotalJirasAssigned : 0,
+      IsSelectedForAssigning:false
     };
 
     this.myTeamInfo = {
@@ -66,7 +67,7 @@ export class AddTeammatesPageComponent implements OnInit {
     return this.myTeamInfo.members.find(d=>d.Name?.toLowerCase() === name.toLowerCase());
   }
 
-  addTeamMember(){
+  public addTeamMember(){
 
     //validation
     const result = this.validateNewTeamMember(this.teamMember,this.isSmartMode,this.myTeamInfo);
@@ -79,7 +80,8 @@ export class AddTeammatesPageComponent implements OnInit {
         Name : this.teamMember.Name,
         Role:this.roleDropdown.find(d=>d.id === Number(this?.teamMember?.Role)) ?? null,
         TotalJirasAssigned : 0,
-        WorkingHours : this.teamMember.WorkingHours
+        WorkingHours : this.teamMember.WorkingHours,
+        IsSelectedForAssigning:false
       };
 
       
@@ -92,7 +94,7 @@ export class AddTeammatesPageComponent implements OnInit {
       //save in localstorage
       this.localStorageService.saveInLocalStorage("TeamInfo",this.myTeamInfo);
   
-      this.myTeamInfo.teamName = "";
+      // this.myTeamInfo.teamName = "";
       this.teamMember.Name = "";
       this.teamMember.Role = {id:0,name:""};
       this.teamMember.WorkingHours = 0;

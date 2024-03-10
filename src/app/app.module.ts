@@ -9,6 +9,7 @@ import { TeamPageComponent } from './Components/team-page/team-page.component';
 import { AddDetailsPageComponent } from './Components/add-details-page/add-details-page.component';
 import { AddTeammatesPageComponent } from './Components/add-teammates-page/add-teammates-page.component';
 import { AssignPageComponent } from './Components/assign-page/assign-page.component';
+import { GoBackButtonComponent } from './Components/go-back-button/go-back-button.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AssignPageComponent } from './Components/assign-page/assign-page.compon
     TeamPageComponent,
     AddDetailsPageComponent,
     AddTeammatesPageComponent,
-    AssignPageComponent
+    AssignPageComponent,
+    GoBackButtonComponent,
   ],
   imports: [
     BrowserModule,

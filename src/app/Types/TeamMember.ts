@@ -5,5 +5,6 @@ export type TeamMember = {
     Name:string,
     Role:RoleType | null,
     WorkingHours:number | null,
-    TotalJirasAssigned : number
+    TotalJirasAssigned : number,
+    IsSelectedForAssigning:boolean
 }

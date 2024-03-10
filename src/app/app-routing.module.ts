@@ -8,7 +8,7 @@ import { AssignPageComponent } from './Components/assign-page/assign-page.compon
 
 const routes: Routes = [
   {path:"Home",component:HomePageComponent,pathMatch:"full"},
-  {path:"Your-Team",component:TeamPageComponent,pathMatch:"full"},
+  {path:"your-team",component:TeamPageComponent,pathMatch:"full"},
   {path:"add-details",component:AddDetailsPageComponent,pathMatch:"full"},
   {path:"add-teammates",component:AddTeammatesPageComponent,pathMatch:"full"},
   {path:"assign-tasks",component:AssignPageComponent,pathMatch:"full"},
