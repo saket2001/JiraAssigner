@@ -1,0 +1,47 @@
+<section class="my-2 flex flex-col p-5">
+    <!-- card -->
+        <h1 class="my-2 text-black font-bold text-2xl">Your Team</h1>
+        <p class="text-lg">
+            Manage all your team details here.
+        </p>
+
+        <!-- form div-->
+        <div class="w-100 flex flex-col my-4">
+            <!-- Total team members form  -->
+            <form #teamInfo="ngForm" class="flex flex-col w-1/2" (submit)="saveTeamInfo(teamInfo.value)">
+                <div class="input-div input-div_col">
+                    <label for="" class="input_label">Team Name</label>
+                    <input type="text" class="input_box" name="teamName" spellcheck="false" [(ngModel)]="myTeamInfo.teamName" #teamName="ngModel" ngModel>
+                </div>
+                <div class="input-div input-div_col">
+                    <label for="" class="input_label">Total Members</label>
+                    <input type="number" class="input_box" min="0" name="totalMembers" [(ngModel)]="myTeamInfo.totalMembers" #totalMembers="ngModel" ngModel>
+                </div>
+            </form>
+            
+            <!-- form starts -->
+            <form action="" id="membersDetailsForm">
+                <!-- <div class="input-div input-div_col w-3/4">
+                    <label for="">Member 1 Details</label>
+                    <div class="flex gap-x-4">
+                        <input type="text" class="input_box" placeholder="Full Name" name="totalMembers" #totalMembers="ngModel" ngModel>
+                        <select name="" id="" class="input_box">
+                            <option value="">Select Role</option>
+                            <option value="Developer">Developer</option>
+                            <option value="Tester">Tester</option>
+                        </select>
+                        <input type="number" class="input_box" placeholder="Total Working Days" name="totalMembers" #totalMembers="ngModel" ngModel>
+                    </div>
+                </div> -->
+
+            </form>
+            <!-- form ends -->
+            
+            <!-- buttons -->
+            <div class="flex p-2 my-2 justify-center">
+                <button type="button" (click)="saveTeamInfo(teamInfo.value)" class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">
+                    Save Details
+                </button>
+            </div>
+        </div>
+</section>

@@ -1,0 +1,22 @@
+<section class="my-5 flex flex-col items-center">
+    <!-- card -->
+    <div class="bg-cyan-100 p-5 rounded-md my-5 flex flex-col justify-center text-gray-700 items-center lg:w-1/2">
+        <h1 class="my-2 text-black font-bold lg:text-2xl text-lg">Welcome To Quick Assign</h1>
+        <p class="lg:text-lg text-base lg:w-3/4 text-center">A smart and quick way to randomly assign tasks to your teammates during sprint</p>
+
+        <!-- modes buttons -->
+        <div class="flex flex-col p-5 my-4 justify-center items-center bg-gray-100 rounded-md shadow">
+            <p class="lg:text-lg text-base text-gray-800">
+                Choose your preference of mode to coutinue
+            </p>
+            <div class="my-3 flex justify-center gap-x-3">
+                <a routerLink="/Simple-Mode/Add-Teammates" (click)="RedirectTo(1)" type="button" class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">
+                    Simple Assign
+                </a>
+                <a routerLink="/Add-Details" type="button" (click)="RedirectTo(2)" class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">
+                    Smart Assign
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

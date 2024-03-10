@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 20px;
+}
+
+
+/* common classes */
+
+/* forms start */
+.input-div{
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    width: 100%;
+}
+
+.input-div_col{
+    flex-direction: column;
+}
+
+.input_box{
+    width: 100%;
+    padding: 0.3rem;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.input_label{
+    font-size: 19px;
+    font-weight: 400;
+}
+
+/* forms ends */
